@@ -80,7 +80,7 @@ grunt curl:dest
 ```js
 curl: {
   'task-name': {
-    src: 'http://files.com/path/to/file.js',
+    options: 'http://files.com/path/to/file.js',
     dest: 'location/to/download/file.js'
   }
 }
@@ -98,7 +98,7 @@ This is an example of the long format leveraging [`request`][] parameters for ma
 ```js
 curl: {
   'task-name': {
-    src: {
+    options: {
       url: 'http://files.com/path/to/file.js',
       method: 'POST',
       body: 'abc'
@@ -211,7 +211,7 @@ Using [`request`][] options we can add a proxy to our requests
 ```js
 curl: {
   custom: {
-    src: {
+    options: {
       url: 'http://google.com',
       proxy: 'http://127.0.0.1:9001/'
     },

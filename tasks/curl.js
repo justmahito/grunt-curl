@@ -14,7 +14,7 @@ module.exports = function (grunt) {
   // Define a task for single files
   grunt.registerMultiTask('curl', 'Download files from the internet via grunt.', function () {
     // Collect the filepaths we need
-    var src = this.file.src;
+    var src = this.data.options || this.file.src;
     var dest = this.file.dest;
     var done = this.async();
 
